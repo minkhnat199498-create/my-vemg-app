@@ -32,7 +32,7 @@ if st.button("စတင် အသံသွင်းမည်") and uploaded_file
         st.write("**မူရင်းအသံ စာသား -**", original_text[:200] + "...")
 
     with st.spinner("၂/၄ - မြန်မာလို အဓိပ္ပာယ်ပြန်ဆိုနေပါသည် (Gemini)..."):
-        gemini_model = genai.GenerativeModel("models/gemini-1.5-flash")
+        gemini_model = genai.GenerativeModel("gemini-2.5-flash")
         prompt = f"Translate the following transcript into natural, engaging Burmese narrative suitable for a movie recap: {original_text}"
         response = gemini_model.generate_content(prompt)
         burmese_text = response.text
